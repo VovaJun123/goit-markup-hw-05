@@ -55,7 +55,9 @@ p {
     margin-right: 0;
 
 }
-
+.coolor {
+    color: #404bbf;
+}
 .linkk-header {
     position: relative;
     color:  var(second-background-color);
