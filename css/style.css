@@ -290,6 +290,8 @@ p {
     background-color: var(--thre-background-color);
     margin: 0 auto;
     margin-top: 48px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 
 }
 
@@ -498,6 +500,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .four-list-lick:is(:hover, :focus) {
@@ -546,6 +549,7 @@ p {
     align-items: center;
     justify-content: center;
     color: var(--fife-color);
+      transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
@@ -660,6 +664,7 @@ p {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-linc:is(:hover, :focus) {
