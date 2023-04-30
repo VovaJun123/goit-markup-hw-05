@@ -56,23 +56,21 @@ p {
 
 }
 
-/* .header-link::after {
-    border-bottom: 2px solid var(--thre-background-color);
-} */
-/* .header-link::before,
+.header-link {
+    position: relative;
+    color: var(--second-background-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .header-link::after {
     content: '';
-    display: inline-block;
-    border-bottom: 2px solid var(--thre-background-color);
-} */
-
-/* .header-link:hover::after {
-    content: '';
-    display: block;
-    border-bottom: 6px solid var(--thre-background-color);
-    z-index: 2;
-    color: #31d0aa;
-} */
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: var(--second-background-color);
+    border-radius: 2px;
+}
 
 /* ..................................................modal-window */
 .backdrop {
