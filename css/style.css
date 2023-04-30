@@ -9,6 +9,7 @@
     --four-section-color: #F4F4FD;
     --fife-color: #8e8f99;
     --footer-color: #31d0aa;
+    --transition-dur-and-func: 250ms linear;
 }
 
 
@@ -54,6 +55,78 @@ p {
     margin-right: 0;
 
 }
+
+/* .header-link::after {
+    border-bottom: 2px solid var(--thre-background-color);
+} */
+/* .header-link::before,
+.header-link::after {
+    content: '';
+    display: inline-block;
+    border-bottom: 2px solid var(--thre-background-color);
+} */
+
+/* .header-link:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 6px solid var(--thre-background-color);
+    z-index: 2;
+    color: #31d0aa;
+} */
+
+/* ..................................................modal-window */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.08);
+    z-index: 100;
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 580px;
+    background-color: #e7e9fc;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+
+
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
 
 .header-bloc {
     border-bottom: 1px solid #e7e9fc;
@@ -114,6 +187,8 @@ p {
 
 .menuu .linkk-header:hover {
     color: var(--second-background-color);
+    border-bottom: 10px solid var(--thre-background-color);
+
 }
 
 .menuu .linkk-header:focus {
@@ -654,10 +729,53 @@ p {
 
 
 
+
+
+
+
+
+
 .firstt-link {
     background: var(--main-color);
     width: calc((100% - 48px) / 3);
+
 }
+
+.overlay-box {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #3f51b5;
+    opacity: 90%;
+    transform: translate(0, 100%);
+    transition: transform 250ms linear;
+}
+
+.overlay-box:hover .overlay {
+    transform: translatex(0);
+}
+
+.overlay {
+    color: white;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0;
+    font-size: 18px;
+}
+
+
+
+
 
 
 
@@ -678,7 +796,7 @@ p {
 
 
 
-.link:is(:hover, :focus) {
+.firstt-link .link:is(:hover, :focus) {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
