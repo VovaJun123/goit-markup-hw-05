@@ -58,12 +58,12 @@ p {
 .coolor {
     color: #404bbf;
 }
-.linkk-header {
+.coolor {
     position: relative;
     color:  var(second-background-color);
 }
 
-.linkk-header::after {
+.coolor::after {
     content: '';
     position: absolute;
     left: 0;
@@ -756,6 +756,7 @@ p {
     line-height: 24px;
     letter-spacing: 0.02em;
     color: var(--logo-color);
+    margin-bottom: 8px;
 
 }
 
